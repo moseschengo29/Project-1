@@ -1,0 +1,20 @@
+{
+  "Reviews": [
+    {
+      "fullName": "Martin Lenga",
+      "movieTitle": "Guardians of the galaxy vol 2",
+      "emailAddress": "test@gmail.com",
+      "rating": "4",
+      "review": "Guardians of the Galaxy Vol. 2 is a highly entertaining superhero film with a perfect blend of action, humor, and emotion. The engaging storyline explores the characters' personal lives and relationships, while the stunning visual effects and vibrant soundtrack enhance the overall experience. It's a thrilling and enjoyable movie that surpasses its predecessor.",
+      "id": "-UiHBtu"
+    },
+    {
+      "fullName": "Moses Chengo",
+      "movieTitle": "Avengers:Endgame",
+      "emailAddress": "mosesmwapahe2005@gmail.com",
+      "rating": "5",
+      "review": "It is a great movie! I enjoyed it very much. 10/10",
+      "id": "i28jIZD"
+    }
+  ]
+}

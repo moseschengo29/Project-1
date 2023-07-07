@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title ></title>
+    <title>Tafuta Movie</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <a href="http://127.0.0.1:5500/index.html"><h1 class="logo">Tafuta<span class="logo-tag">Movies</span></h1></a>
+        <div class="left">
+            <button class="btn add-review-btn">Add a Review</button>
+            <button class="reviews btn">Reviews &rarr;</button>
+        </div>
+      </nav>
+
+      <div class="search-section">
+        <form
+          onsubmit="event.preventDefault();"
+          role="search"
+          class="search-form"
+        >
+          <label class="label_searchBar" for="search">Search for movie</label>
+          <input
+            id="search"
+            class="form-control"
+            type="search"
+            placeholder="Search for any movie..."
+            autofocus
+            required
+          />
+          <div class="search-list" id="search-list">
+            <!-- <div class="search-list-item"> 
+               <div class="search-item-thumbnail">
+                <img
+                  src="./images/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
+                />
+              </div>
+              <div class="search-item-info">
+                <h3>Guardians of the Galaxy Vol. 2</h3>
+                <p>2017</p>
+              </div> 
+            </div>-->
+          </div>
+        </form>
+        <button type="submit" class="search-button">
+          <ion-icon name="search-outline"></ion-icon> Search
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="grid">
+        <div class="movie-img">
+          <img
+            src="./images/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg"
+            alt="movie-poster"
+          />
+        </div>
+        <div class="movie-details">
+          <p class="movie-title">Title: Guardians of the Galaxy Vol. 2</p>
+          <p class="movie-type"><span class="bold">Type: </span>movie</p>
+          <p class="movie-rated">PG-13</p>
+          <p class="movie-year"><span class="bold">Year: </span>2017</p>
+          <p class="movie-dir">
+            <span class="bold"> Director: </span>James Gunn, Dan Abnett, Andy
+            Lanning
+          </p>
+          <p class="movie-genre">
+            <span class="bold">Genre: </span>Action, Adventure, Comedy
+          </p>
+          <p class="movie-actors">
+            <span class="bold"> Actors: </span>Chris Pratt, Zoe Saldana, Dave
+            Bautista
+          </p>
+          <p class="movie-awa">
+            <ion-icon name="trophy-outline" class="icon"></ion-icon>
+            : Nominated for 1 Oscar. 15 wins & 60 nominations total
+          </p>
+          <p class="movie-plot">
+            <span class="bold"> Plot: </span>The Guardians struggle to keep
+            together as a team while dealing with their personal family issues,
+            notably Star-Lord's encounter with his father, the ambitious
+            celestial being Ego.
+          </p>
+          <p class="movie-rat">
+            <span class="bold">imdbRating: </span
+            ><span class="rating">7.6</span>
+          </p>
+        </div>
+    </main>
+
+    <div class="modal hidden">
+        <button class="btn--close-modal">&times;</button>
+        <h2 class="modal__header">
+          Leave a review for any movie <br />
+          for others to see.
+        </h2>
+        <form class="modal__form">
+          <label>Full Name</label>
+          <input type="text" required placeholder="Moses Chengo" id="fullname" />
+          <label>Movie Title</label>
+          <input
+            type="text"
+            required
+            placeholder="Movie Title"
+            id="movie_title"
+          />
+          <label>Email Address</label>
+          <input
+            type="email"
+            required
+            placeholder="mochengo@gmail.com"
+            id="email"
+          />
+          <label>Rating</label>
+          <input
+            type="number"
+            min="0"
+            max="5"
+            step="0.5"
+            required
+            placeholder="/5"
+            id="rating"
+          />
+          <label>Review</label>
+          <textarea
+            rows="4"
+            cols="50"
+            placeholder="Enter your review..."
+            id="review"
+          ></textarea>
+          <button class="btn">Submit Review &rarr;</button>
+        </form>
+      </div>
+      <div class="overlay hidden"></div>
+
+    <section class="all_reviews">
+        <div>
+            <!-- <div class="review__data">
+                <h3 class="review__name">REVIEW</h3>
+                <p class="review__row"><span>🎬 </span>Movie Title</p>
+                <p class="review__row"><span>👤</span>Full Name</p>
+                <p class="review__row"><span>📩</span>Email</p>
+            <p class="review__row"><span>🗣️</span>Review: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius odio officiis magni. Obcaecati expedita aliquid nulla consequatur, alias voluptate ut, magni deleniti neque amet ex adipisci est reiciendis accusantium vero.</p>
+            <p class="review__row"><span>⭐</span>Rating: 5/5</p>
+          </div> -->
+        </div>
+    </section>  
+
+    <h1 class="featured-header hidden">Movies related to your search...</h1>
+    <section class="featured">
+        <!-- <div class="featured-movie">
+            <img src="./images/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg" alt="">
+            <p class="related-title">Movie name</p>
+            <p class="related-year">2017</p>
+        </div> -->
+        
+    </section>
+
+
+    <footer class="footer">
+      <p>&copy Moses Chengo - 2023</p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
